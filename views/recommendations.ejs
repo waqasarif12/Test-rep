@@ -1,0 +1,22 @@
+
+
+<div
+	class="recommendations"
+
+>
+	<h1>Music Preferences</h1>
+	<p>Choose your Music Preferences to enjoy Personalized Recommendations.</p>
+	<div class="genres">
+		<% for(let genre of all_genres){ %>
+		<div
+			class="genre active"
+			data-genre-id="<%= genre.id %>"
+			style="background-image: url('<%= genre.thumbnail %>')"
+		>
+			<h2><%= genre.name %></h2>
+			<i class="fa-solid fa-circle-check"></i>
+		</div>
+		<% } %>
+	</div>
+	<button>Submit</button>
+</div>
