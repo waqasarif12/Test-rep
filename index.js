@@ -14,13 +14,9 @@ const logger = require("morgan");
 const flash = require("connect-flash");
 const customMiddleware = require("./config/middleware");
 const session = require("express-session");
-const sassMiddleware = require("node-sass-middleware");
-const passportGoogle = require("./config/passport-google-oauth2-strategy");
-const passportJWT = require("passport-jwt");
 const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
 const passportSpotify = require("./config/passport-spotify-strategy");
-const MongoStore = require("connect-mongo");
 const route = require("./routes/index");
 
 mongoose.connect(process.env.MONGO_URL, {
